@@ -1,0 +1,44 @@
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+<title>Main</title>
+<!-- common css-->
+<link th:href="@{/css/common.css}" rel="stylesheet" />
+
+
+<style>
+.main {
+	text-align: center;
+}
+</style>
+
+</head>
+
+
+<body>
+	<!-- 헤더 -->
+	<th:block layout:fragment="header" th:replace="~{@{fragments/header}}"></th:block>
+	<!-- 헤더 -->
+
+
+
+
+	<div layout:fragment="content" class="content">
+		<h2>main page</h2>
+		<div class="main">한글도 잘 되니?!</div>
+		<span th:text=${te}></span>
+	</div>
+
+
+
+
+	<!-- 푸터 -->
+	<th:block layout:fragment="footer" th:replace="~{@{fragments/footer}}"></th:block>
+	<!-- 푸터 -->
+</body>
+</html>
+
+
+<script>
+	
+</script>
