@@ -33,32 +33,30 @@ html>body {
 	font-family: 'Pretendard-Regular';
 }
 
-
 /* 헤더, 푸터 고정을 위한 설정 -> */
-body{
+body {
 	display: flex;
-	flex-direction:column;
+	flex-direction: column;
 	min-height: 100vh;
-	
 }
 
 .header {
-	background-color: Gray;
-	height: 70px;
+	background-color: skyblue;
+	height: 60px;
 	width: 100%;
 	position: fixed;
 	top: 0;
 }
 
 .content {
-	margin-top: 70px;
+	margin-top: 60px;
+	margin-bottom: auto;
 }
 
-.footer {
+/*  tailwind UI 때문에 class 이름 footer에서 foot으로 수정 */
+.foot {
 	background-color: yellow;
-	height: 200px;
+	height: 150px;
 	width: 100%;
-	margin-top: auto;
 }
 /* <- 헤더, 푸터 고정을 위한 설정 */
-
