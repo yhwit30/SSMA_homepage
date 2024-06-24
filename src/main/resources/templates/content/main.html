@@ -4,36 +4,30 @@
 <title>Main</title>
 <!-- common css-->
 <link th:href="@{/css/common.css}" rel="stylesheet" />
+<!-- 테일윈드css -->
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.7/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
 
-
-<style>
-.main {
-	text-align: center;
-}
-</style>
 
 </head>
 
 
 <body>
 	<!-- 헤더 -->
-	<th:block layout:fragment="header" th:replace="~{@{fragments/header}}"></th:block>
+	<th:block th:replace="~{@{fragments/header}}"></th:block>
 	<!-- 헤더 -->
 
-
-
-
-	<div layout:fragment="content" class="content">
-		<h2>main page</h2>
-		<div class="main">한글도 잘 되니?!</div>
-		<span th:text=${te}></span>
+	<!-- 내용 -->
+	<div class="content">
+		<div class="text-center">SS Music Academy</div>
 	</div>
 
 
 
 
+
 	<!-- 푸터 -->
-	<th:block layout:fragment="footer" th:replace="~{@{fragments/footer}}"></th:block>
+	<th:block th:replace="~{@{fragments/footer}}"></th:block>
 	<!-- 푸터 -->
 </body>
 </html>

@@ -34,20 +34,31 @@ html>body {
 }
 
 
-body, html {
-	height: 100%;
+/* 헤더, 푸터 고정을 위한 설정 -> */
+body{
+	display: flex;
+	flex-direction:column;
+	min-height: 100vh;
+	
 }
 
 .header {
 	background-color: Gray;
-	height: 10%
+	height: 70px;
+	width: 100%;
+	position: fixed;
+	top: 0;
 }
 
 .content {
-	height: 80%;
+	margin-top: 70px;
 }
 
 .footer {
 	background-color: yellow;
-	height: 10%
+	height: 200px;
+	width: 100%;
+	margin-top: auto;
 }
+/* <- 헤더, 푸터 고정을 위한 설정 */
+

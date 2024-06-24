@@ -10,7 +10,6 @@ public class MainController {
 	@RequestMapping(value = "/main")
 	public String goHome(Model model) {
 		
-		model.addAttribute("te", 123);
 		
 		return "content/main";
 	}
