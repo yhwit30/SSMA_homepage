@@ -1,0 +1,61 @@
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+<title>Contact</title>
+
+<!-- 헤더 -->
+<th:block th:replace="~{@{fragments/header}}"></th:block>
+<!-- 헤더 -->
+
+
+
+
+</head>
+
+
+<body>
+
+
+	<section class="content">
+
+
+<div class="flex flex-col items-start justify-center gap-y-6 px-40 py-20 ">
+
+		<div>기타레슨</div>
+		<div>피아노레슨</div>
+		<div>보컬레슨</div>
+
+		<div>클래식기타 50호</div>
+		<div>클래식기타 100호</div>
+		<div>클래식기타 200호</div>
+		<div>클래식기타 500호</div>
+		<div>클래식기타 연주용</div>
+
+</div>
+	</section>
+
+
+
+
+	<!-- 푸터 -->
+	<th:block th:replace="~{@{fragments/footer}}"></th:block>
+	<!-- 푸터 -->
+</body>
+</html>
+
+
+<!-- 이 페이지 css -->
+<style>
+table {
+	border: 1px solid black;
+	border-collapse: collapse;
+	width: 90%;
+	margin: 0 auto;
+}
+
+th, td {
+	border: 1px solid black;
+	padding: 8px;
+	text-align: center;
+}
+</style>

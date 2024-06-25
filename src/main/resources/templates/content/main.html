@@ -2,57 +2,103 @@
 
 <head>
 <title>Main</title>
-<!-- common css-->
-<link th:href="@{/css/common.css}" rel="stylesheet" />
-<!-- 테일윈드css -->
-<link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.7/dist/full.min.css" rel="stylesheet" type="text/css" />
-<script src="https://cdn.tailwindcss.com"></script>
-<!-- 폰트어썸 아이콘 -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+<!-- 헤더 -->
+<th:block th:replace="~{@{fragments/header}}"></th:block>
+<!-- 헤더 -->
+
 </head>
 
 
 <body>
-	<!-- 헤더 -->
-	<th:block th:replace="~{@{fragments/header}}"></th:block>
-	<!-- 헤더 -->
 
 	<!-- 내용 -->
 	<section class="content">
-		<div
-			class="main_bg_image flex flex-col items-center justify-center min-h-[760px] w-full bg-cover bg-center bg-no-repeat gap-y-10"
-			style="background-image: url('resource/ssma피아노실.jpg');">
-			<div class="text-white text-7xl">SS Music Academy</div>
-			<div class="text-white text-7xl h-48">양재점</div>
+
+		<div class="flex flex-col items-center justify-center gap-y-6 min-h-[760px] w-full bg-cover bg-center bg-no-repeat "
+			style="background-image: url('/resource/ssma피아노실.jpg');">
+			<p class="text-white text-7xl">SS Music Academy</p>
+			<aside class="h-24"></aside>
 		</div>
 
-		<div class="text-center h-48 ">SS Music Academy 양재점</div>
-		<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus debitis hic modi a cum fuga eius odit
-			at consequuntur fugit quasi aliquam corrupti tempora soluta non facilis rem voluptatem molestias.</div>
-		<div>Error provident odio fugit autem officia cumque eaque sint obcaecati dolorum minus hic quidem debitis.
-			Facere tempora veritatis cumque saepe nihil dolor laboriosam aperiam perspiciatis possimus atque itaque fugit nisi!</div>
-		<div>Quo ad id tenetur blanditiis libero temporibus nesciunt est ex nihil rem. Tenetur molestiae earum aut
-			adipisci quos eos architecto minus natus veniam excepturi delectus distinctio omnis odio quibusdam officia!</div>
-		<div>Nulla harum obcaecati rem totam est vero necessitatibus ipsa alias porro exercitationem illo eius beatae?
-			Eaque velit ex libero reiciendis fugiat delectus alias sunt dolore ad molestiae excepturi dolores illum.</div>
-		<div>Earum tempora quos molestias et nihil. Nulla doloremque non blanditiis enim magni maxime possimus
-			voluptatem aspernatur dolorem itaque adipisci quisquam ab earum ullam magnam fuga expedita unde necessitatibus
-			tenetur quibusdam.</div>
-		<div>Delectus itaque alias nisi placeat tempore culpa voluptatibus dolorum vel voluptatem nostrum? Rerum
-			molestias veniam earum similique assumenda porro perferendis aliquid veritatis vero sequi voluptatum maxime quisquam
-			officia quia accusantium!</div>
-		<div>Error at molestias itaque eum ullam architecto? Illo a deleniti temporibus repudiandae harum doloremque
-			nesciunt expedita sequi aspernatur recusandae maiores odit amet culpa nulla vel consectetur possimus beatae non
-			neque.</div>
-		<div>Aut asperiores perferendis maiores deleniti dolore fuga architecto suscipit reiciendis. Porro nobis velit
-			minima unde aliquid dolorem accusantium veritatis quae officia nulla repellat nemo sunt ipsam architecto reiciendis
-			mollitia possimus?</div>
-		<div>Natus voluptatibus laborum similique harum expedita aut animi voluptas omnis dignissimos nulla tenetur
-			laudantium accusantium sapiente eaque quidem! Quia quis blanditiis tempore eos error dicta hic at neque praesentium
-			voluptates.</div>
-		<div>Quis modi excepturi soluta voluptatem quod neque culpa impedit officia alias nobis adipisci quasi. Non
-			tenetur cupiditate in animi quos sit quidem praesentium molestiae ipsam reprehenderit tempora atque laudantium
-			commodi.</div>
+
+		<div class="flex flex-col items-center justify-center gap-y-6 px-40 py-20 bg-blue-200">
+			<p class="text-3xl">SS Music Academy 소개</p>
+			<p class="px-40">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore accusamus ab dolore magni
+				dignissimos ullam error impedit autem laborum itaque eos fuga odio sequi. Eligendi vero obcaecati consectetur ea
+				accusantium.</p>
+			<button class="btn btn-sm">문의하기</button>
+		</div>
+
+
+		<div class="flex flex-col items-center justify-center gap-y-6 px-40 py-20 bg-green-200">
+			<p class="text-3xl">학원 핵심 포인트 및 사진</p>
+			<p>SS Music Academy 연습실</p>
+			<div class="h-80 w-3/4 bg-yellow-200">사진</div>
+			<p>SS Music Academy 프로그램</p>
+			<div class="h-80 w-3/4 bg-yellow-200">사진</div>
+			<p>SS Music Academy 교재</p>
+			<div class="h-80 w-3/4 bg-yellow-200">사진</div>
+		</div>
+
+
+		<div class="flex flex-col items-center justify-center gap-y-6 px-40 py-40">
+			<p class="text-3xl">SS Music Academy 강사진</p>
+			<div class="flex gap-x-5">
+				<div class="h-80 w-56 bg-cover bg-center bg-no-repeat flex flex-col items-center justify-end"
+					style="background-image: url('/resource/허원경 프로필사진.jpg');">
+					<p class="text-white text-2xl">허원경</p>
+					<p class="text-white text-sm">클래식기타</p>
+					<br>
+					<p class="text-white text-sm">insta : @heo_won_gyung</p>
+				</div>
+				<div class="h-80 w-56 bg-cover bg-center bg-no-repeat flex flex-col items-center justify-end"
+					style="background-image: url('/resource/임재민 프로필사진.jpg');">
+					<p class="text-white text-2xl">임재민</p>
+					<p class="text-white text-sm">클래식기타</p>
+					<br>
+					<p class="text-white text-sm">insta :</p>
+				</div>
+				<div class="h-80 w-56 bg-cover bg-center bg-no-repeat flex flex-col items-center justify-end"
+					style="background-image: url('/resource/허대욱 프로필사진.jpg');">
+					<p class="text-white text-2xl">허대욱</p>
+					<p class="text-white text-sm">재즈피아노</p>
+					<br>
+					<p class="text-white text-sm">insta :</p>
+				</div>
+				<div class="h-80 w-56 bg-cover bg-center bg-no-repeat flex flex-col items-center justify-end"
+					style="background-image: url('/resource/허병훈 프로필사진.jpg');">
+					<p class="text-white text-2xl">허병훈</p>
+					<p class="text-white text-sm">클래식기타</p>
+					<br>
+					<p class="text-white text-sm">insta :</p>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="flex flex-col items-center justify-center gap-y-6 px-40 py-20 bg-red-200">
+			<p class="text-3xl">SS Music Academy 정보</p>
+
+			<div class="flex justify-around w-full">
+				<div class="flex flex-col">
+					<p>가격</p>
+					<p>1개월 : 25만원(주1회)</p>
+					<br>
+					<p>주소</p>
+					<p>서울특별시 도곡동945-4(예인빌딩) 4층</p>
+					<br>
+					<p>연락처</p>
+					<p>010-0000-0000</p>
+					<br>
+					<p>운영시간</p>
+					<p>평일 : 10:00 ~ 21:00</p>
+				</div>
+				<div class="h-96 w-72 bg-yellow-200">지도</div>
+
+			</div>
+
+		</div>
 
 
 	</section>

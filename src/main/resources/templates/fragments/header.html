@@ -1,15 +1,25 @@
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<meta charset="UTF-8">
+<!-- common css-->
+<link th:href="@{/css/common.css}" rel="stylesheet" />
+<!-- 테일윈드css -->
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.7/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- 폰트어썸 아이콘 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
 <div class="header">
 
 	<nav class="h-full w-full flex items-center justify-between px-40">
-		<div>SS Music Academy</div>
+		<div><a href="/main">SS Music Academy</a></div>
 		<div>
 			<ul class="flex gap-x-20 text-sm">
 				<li>
-					<a href="">홈</a>
+					<a href="/main">홈</a>
 				</li>
 				<li>
 					<div class="dropdown dropdown-hover">
-						<a href="">SSMA 소개</a>
+						<a href="">SSMA 지점</a>
 						<ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-24 p-2 shadow ">
 							<li>
 								<a href="">양재점</a>
@@ -22,13 +32,14 @@
 
 				</li>
 				<li>
-					<a href="">강사진</a>
+					<a href="/artist/list">강사진</a>
 				</li>
 				<li>
-					<a href="">문의하기</a>
+					<a href="/shop">SHOP</a>
 				</li>
 			</ul>
 		</div>
+		<div class="text-sm">회원관리</div>
 	</nav>
 
 </div>

@@ -2,73 +2,85 @@
 
 <head>
 <title>Artist</title>
-<!-- common css-->
-<link th:href="@{/css/common.css}" rel="stylesheet" />
 
-<!-- 이 페이지 css -->
-<style>
-table {
-	border: 1px solid black;
-	border-collapse: collapse;
-	width: 90%;
-	margin:0 auto;
-}
+<!-- 헤더 -->
+<th:block th:replace="~{@{fragments/header}}"></th:block>
+<!-- 헤더 -->
 
-th, td {
-	border: 1px solid black;
-	padding: 8px;
-	text-align: center;
-}
-</style>
+
 
 
 </head>
 
 
 <body>
-	<!-- 헤더 -->
-	<th:block layout:fragment="header" th:replace="~{@{fragments/header}}"></th:block>
-	<!-- 헤더 -->
 
 
-	<div layout:fragment="content" class="content">
-		<h2>artist page</h2>
+	<section class="content">
 
-		<hr />
+		<div class="flex flex-col items-center justify-center gap-y-20 px-40 py-32">
+			<p class="text-3xl">SS Music Academy 강사진</p>
 
-		<table>
-			<tr>
-				<th>id</th>
-				<th>regDate</th>
-				<th>updateDate</th>
-				<th>name</th>
-				<th>gender</th>
-				<th>birth</th>
-			</tr>
-			<th:block th:each="artist : ${artists}">
-				<tr>
-					<td th:text="${ artist.id }"></td>
-					<td th:text="${ artist.regDate }"></td>
-					<td th:text="${ artist.updateDate }"></td>
-					<td th:text="${ artist.name}"></td>
-					<td th:text="${ artist.gender }"></td>
-					<td th:text="${ artist.birth }"></td>
-				</tr>
-			</th:block>
-		</table>
+			<div class="flex justify-start gap-x-10 w-full">
+				<div class="h-80 w-64 bg-cover bg-center" style="background-image: url('/resource/허원경 프로필사진.jpg');"></div>
+				<div class="flex flex-col w-full">
+					<p class="text-2xl">허원경</p>
+					<p class="text-sm">클래식기타</p>
+					<p class="text-sm">insta : @heo_won_gyung</p>
+					<br>
+					<p>기타리스트 허원경은 서울대학교 음악대를 졸업하고 스페인 국비 장학생으로 마드리드 왕립음악원에서 최고 교수 및 최고 연주자 학위를 받았습니다. 그녀는 다수의 국제 음악 학교에서 장학생으로
+						선발되었으며, 세계 각지에서 독주 및 협연으로 활약하고 있습니다. 현재는 수원대학교 겸임교수로 활동하며, 국내 유수의 대학에서 강사로 활동하고 있습니다. 그녀의 앨범 "Aire de España"는
+						전문가와 음악 애호가들 사이에서 큰 인기를 끌었으며, 후학 양성에도 열정적으로 힘을 쏟고 있습니다.</p>
 
-	</div>
+				</div>
+			</div>
+			<div class="flex justify-start gap-x-10 w-full">
+				<div class="h-80 w-64 bg-cover bg-center" style="background-image: url('/resource/임재민 프로필사진.jpg');"></div>
+				<div class="flex flex-col w-full">
+					<p class="text-2xl">임재민</p>
+					<p class="text-sm">클래식기타</p>
+					<p class="text-sm">insta :</p>
+					<br>
+					<p>기타리스트 임재민은 서울대학교 음악대를 졸업하고 스페인 ~~~</p>
+
+				</div>
+			</div>
+			<div class="flex justify-start gap-x-10 w-full">
+				<div class="h-80 w-64 bg-cover bg-center" style="background-image: url('/resource/허대욱 프로필사진.jpg');"></div>
+				<div class="flex flex-col w-full">
+					<p class="text-2xl">허대욱</p>
+					<p class="text-sm">재즈피아노</p>
+					<p class="text-sm">insta :</p>
+					<br>
+					<p>재즈 피아니스트 허대욱은 어릴 적부터 클래식 음악에 둘러싸인 가정에서 자라며 피아노를 연주하기 시작했다. 모차르트의 작품으로부터 영감을 받아 작곡을 시작한 그는 프랑스로 유학하여 재즈를
+						공부하고, 뛰어난 재능으로 주목받았다. 그의 음반은 국제적으로도 호평을 받으며 프랑스와 국제적인 무대에서 연주하였고, 한국인 최초로 프랑스의 대표 레이블에서 발매되기도 했다. 또한, 피아노 독주 음반을
+						통해 자신만의 서정성을 드러내며 음악적인 실험을 이어가고 있다.</p>
+
+				</div>
+			</div>
+			<div class="flex justify-start gap-x-10 w-full">
+				<div class="h-80 w-64 bg-cover bg-center" style="background-image: url('/resource/허병훈 프로필사진.jpg');"></div>
+				<div class="flex flex-col w-full">
+					<p class="text-2xl">허병훈</p>
+					<p class="text-sm">클래식기타</p>
+					<p class="text-sm">insta :</p>
+					<br>
+					<p>경력</p>
+
+				</div>
+			</div>
+
+
+
+		</div>
+	</section>
 
 
 
 
 	<!-- 푸터 -->
-	<th:block layout:fragment="footer" th:replace="~{@{fragments/footer}}"></th:block>
+	<th:block th:replace="~{@{fragments/footer}}"></th:block>
 	<!-- 푸터 -->
 </body>
 </html>
 
-
-<script>
-	
-</script>
