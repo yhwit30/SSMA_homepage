@@ -46,6 +46,7 @@ body {
 	width: 100%;
 	position: fixed;
 	top: 0;
+	z-index: 99;
 }
 
 .content {
@@ -55,8 +56,9 @@ body {
 
 /*  tailwind UI 때문에 class 이름 footer에서 foot으로 수정 */
 .foot {
-	background-color: yellow;
+	background-color: skyblue;
 	height: 150px;
 	width: 100%;
+	z-index: 99;
 }
 /* <- 헤더, 푸터 고정을 위한 설정 */

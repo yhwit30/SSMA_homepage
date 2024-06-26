@@ -1,0 +1,176 @@
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+<title>양재점</title>
+
+<!-- 헤더 -->
+<th:block th:replace="~{@{fragments/header}}"></th:block>
+<!-- 헤더 -->
+
+</head>
+
+<style>
+#minusZ {
+	z-index: -1;
+}
+</style>
+
+<body>
+
+	<!-- 내용 -->
+	<section class="content">
+
+		<div
+			class="flex flex-col items-center justify-center gap-y-6 min-h-[760px] w-full bg-cover bg-center bg-no-repeat relative z-0"
+			style="background-image: url('/resource/ssma연습실.jpg');">
+			<div id="minusZ" class="absolute h-full w-full bg-black bg-opacity-10"></div>
+			<p class="text-white text-7xl font-serif">SS Music Academy</p>
+			<p class="text-white text-7xl h-24">양재점</p>
+		</div>
+
+
+		<div class="flex flex-col items-center justify-center gap-y-6 px-40 py-20">
+			<p class="text-3xl">SS Music Academy 양재점</p>
+			<p class="px-40">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore accusamus ab dolore magni
+				dignissimos ullam error impedit autem laborum itaque eos fuga odio sequi. Eligendi vero obcaecati consectetur ea
+				accusantium.</p>
+			<button class="btn btn-sm">문의하기</button>
+		</div>
+
+
+		<div class="flex flex-col items-center justify-center gap-y-6 px-40 py-20 bg-green-200">
+			<p class="text-3xl">SS Music Academy 강점</p>
+			<p>SS Music Academy 연습실</p>
+			<div class="h-80 w-3/4 bg-yellow-200">사진</div>
+			<p>SS Music Academy 프로그램</p>
+			<div class="h-80 w-3/4 bg-yellow-200">사진</div>
+			<p>SS Music Academy 교재</p>
+			<div class="h-80 w-3/4 bg-yellow-200">사진</div>
+		</div>
+
+
+		<div class="flex flex-col items-center justify-center gap-y-6 px-40 py-40">
+			<p class="text-3xl">SS Music Academy 양재점 강사진</p>
+			<div class="flex gap-x-5">
+				<div class="h-80 w-56 bg-cover bg-center bg-no-repeat flex flex-col items-center justify-end"
+					style="background-image: url('/resource/허원경 프로필사진.jpg');">
+					<p class="text-white text-2xl">허원경</p>
+					<p class="text-white text-sm">클래식기타</p>
+					<br>
+					<p class="text-white text-sm">insta : @heo_won_gyung</p>
+				</div>
+				<div class="h-80 w-56 bg-cover bg-center bg-no-repeat flex flex-col items-center justify-end"
+					style="background-image: url('/resource/임재민 프로필사진.jpg');">
+					<p class="text-white text-2xl">임재민</p>
+					<p class="text-white text-sm">클래식기타</p>
+					<br>
+					<p class="text-white text-sm">insta :</p>
+				</div>
+				<div class="h-80 w-56 bg-cover bg-center bg-no-repeat flex flex-col items-center justify-end"
+					style="background-image: url('/resource/허대욱 프로필사진.jpg');">
+					<p class="text-white text-2xl">허대욱</p>
+					<p class="text-white text-sm">재즈피아노</p>
+					<br>
+					<p class="text-white text-sm">insta :</p>
+				</div>
+				<div class="h-80 w-56 bg-cover bg-center bg-no-repeat flex flex-col items-center justify-end"
+					style="background-image: url('/resource/허병훈 프로필사진.jpg');">
+					<p class="text-white text-2xl">허병훈</p>
+					<p class="text-white text-sm">클래식기타</p>
+					<br>
+					<p class="text-white text-sm">insta :</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="flex flex-col items-center justify-center gap-y-6 px-40 py-20 bg-red-200">
+			<p class="text-3xl">SS Music Academy(로고)</p>
+			<button class="btn btn-sm">문의하기(기능 아직)</button>
+		</div>
+
+
+		<div class="flex flex-col items-center justify-center gap-y-6 px-40 py-20 bg-blue-200">
+			<p class="text-3xl">SS Music Academy 정보</p>
+
+			<div class="flex justify-center gap-x-20 w-full">
+				<div class="flex flex-col">
+					<p class="text-2xl font-bold">SS Music Academy 양재점</p>
+					<br>
+					<p>가격</p>
+					<p>1개월 : 25만원(주1회)</p>
+					<br>
+					<p>주소</p>
+					<p>서울특별시 도곡동945-4(예인빌딩) 4층</p>
+					<br>
+					<p>연락처</p>
+					<p>010-0000-0000</p>
+					<br>
+					<p>운영시간</p>
+					<p>평일 : 10:00 ~ 21:00</p>
+					<p>주말 : 10:00 ~ 21:00</p>
+				</div>
+				<!-- 지도 태그 -->
+				<div class="h-96 w-72" id="map"></div>
+
+
+			</div>
+
+		</div>
+
+
+	</section>
+
+
+
+
+	<!-- 푸터 -->
+	<th:block th:replace="~{@{fragments/footer}}"></th:block>
+	<!-- 푸터 -->
+</body>
+</html>
+
+
+
+<!-- 지도api -->
+<script type="text/javascript"
+	src="//dapi.kakao.com/v2/maps/sdk.js?appkey=2fa009069ca9821257d2e333b1e9a3ed&libraries=services"></script>
+
+<!-- 지도 및 위도경도 -->
+<script>
+	var map;
+	var mapContainer = document.getElementById('map'); // 지도를 표시할 div 
+
+	function initMap() {
+		var mapOption = {
+			center : new kakao.maps.LatLng(37.488902233685, 127.03329726345), // 지도의 중심좌표(위도, 경도)
+			level : 5
+		// 지도의 확대 레벨
+		};
+
+		map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+		// 지도에 표시
+		setCenter(37.488902233685, 127.03329726345);
+	}
+
+	// 주소에서 얻은 위도,경도로 지도 이동 및 마커 추가
+	function setCenter(lat, lon) {
+		// 마커가 표시될 위치를 생성합니다
+		var markerPosition = new kakao.maps.LatLng(lat, lon);
+
+		// 중심 좌표를 변경하여 지도의 중심을 설정합니다
+		map.setCenter(markerPosition);
+
+		// 마커를 생성합니다
+		var marker = new kakao.maps.Marker({
+			position : markerPosition,
+			map : map
+		// 마커가 지도 위에 표시되도록 설정합니다
+		});
+	}
+
+	// 페이지 로드 시 initMap 함수를 호출하여 지도를 초기화합니다
+	document.addEventListener("DOMContentLoaded", function() {
+		initMap();
+	});
+</script>
