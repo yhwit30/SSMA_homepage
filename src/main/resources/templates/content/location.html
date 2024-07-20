@@ -1,0 +1,105 @@
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+<title>Contact</title>
+
+<!-- 헤더 -->
+<th:block th:replace="~{@{fragments/header}}"></th:block>
+<!-- 헤더 -->
+
+
+
+
+</head>
+
+
+<body>
+
+
+	<section class="content">
+
+		<!-- 페이지 이름 박스 -->
+		<div class="flex flex-col items-center justify-center gap-y-20 px-40 py-40">
+			<p class="text-5xl">SSMA (Seoul Superior Music Academy) 오시는 길</p>
+
+			<div class="flex justify-center gap-x-20 w-full">
+
+				<div class="flex flex-col text-xl">
+					<p>주소</p>
+					<p>서울 강남구 도곡로2길 13 예인빌딩 4층(도곡동 945-4 네이버: NEO빌딩)</p>
+					<br>
+					<p>지하철</p>
+					<p>양재역 3번출구에서 나와서 직진후 벤츠 Mercedes-Benz 건물 보이는 골목으로 들어와서 정면 유리 건물 4층입니다. (도보500m)</p>
+					<br>
+					<p>주차장</p>
+					<p>서한민영 주차장 (1시간 5천원 / 130m)
+					<p>캠코양재타워 주차장 (1시간 6천원 / 300m)</p>
+					<p>언주초 공영주차장(1시간 2천4백원 / 학원까지 도보 700m)</p>
+					<br>
+					<p>운영시간</p>
+					<p>평일 : 10:00 ~ 21:00</p>
+					<p>주말 : 10:00 ~ 21:00</p>
+					<br>
+					<p>연락처</p>
+					<p>02) 557-5703</p>
+				</div>
+				<!-- 지도 태그 -->
+				<div class="h-auto w-96" id="map"></div>
+
+			</div>
+
+		</div>
+
+	</section>
+
+
+	<!-- 푸터 -->
+	<th:block th:replace="~{@{fragments/footer}}"></th:block>
+	<!-- 푸터 -->
+</body>
+</html>
+
+
+<!-- 지도api -->
+<script type="text/javascript"
+	src="//dapi.kakao.com/v2/maps/sdk.js?appkey=2fa009069ca9821257d2e333b1e9a3ed&libraries=services"></script>
+
+<!-- 지도 및 위도경도 -->
+<script>
+	var map;
+	var mapContainer = document.getElementById('map'); // 지도를 표시할 div 
+
+	function initMap() {
+		var mapOption = {
+			center : new kakao.maps.LatLng(37.488902233685, 127.03329726345), // 지도의 중심좌표(위도, 경도)
+			level : 4
+		// 지도의 확대 레벨
+		};
+
+		map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+		// 지도에 표시
+		setCenter(37.488902233685, 127.03329726345);
+	}
+
+	// 주소에서 얻은 위도,경도로 지도 이동 및 마커 추가
+	function setCenter(lat, lon) {
+		// 마커가 표시될 위치를 생성합니다
+		var markerPosition = new kakao.maps.LatLng(lat, lon);
+
+		// 중심 좌표를 변경하여 지도의 중심을 설정합니다
+		map.setCenter(markerPosition);
+
+		// 마커를 생성합니다
+		var marker = new kakao.maps.Marker({
+			position : markerPosition,
+			map : map
+		// 마커가 지도 위에 표시되도록 설정합니다
+		});
+	}
+
+	// 페이지 로드 시 initMap 함수를 호출하여 지도를 초기화합니다
+	document.addEventListener("DOMContentLoaded", function() {
+		initMap();
+	});
+</script>
