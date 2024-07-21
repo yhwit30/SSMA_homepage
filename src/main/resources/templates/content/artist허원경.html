@@ -1,0 +1,60 @@
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+<title>SSMA 허원경</title>
+
+<!-- 헤더 -->
+<th:block th:replace="~{@{fragments/header}}"></th:block>
+<!-- 헤더 -->
+
+</head>
+
+
+<body>
+
+
+	<section class="content">
+
+		<!-- 페이지 이름 박스 -->
+		<div class="flex flex-col items-center justify-center px-40 py-40">
+			<p class="text-5xl pb-20">허원경</p>
+			<p class="text-2xl ">SSMA (Seoul Superior Music Academy) 학원은 최고의 강사진을 자랑합니다.</p>
+			<p class="text-2xl ">각 분야의 전문가로 구성된 강사들은 풍부한 경험과 전문 지식을 바탕으로 학생들을 지도합니다.</p>
+		</div>
+
+
+		<!-- 강사진 프로필 박스 -->
+		<div class="flex flex-col items-center justify-center gap-y-20 px-60 pb-40">
+			<div class="flex justify-start gap-x-10 w-full">
+				<div class="h-96 w-80 bg-cover bg-center rounded-lg" style="background-image: url('/resource/허원경 프로필사진.jpg');"></div>
+				<div class="flex flex-col w-full">
+					<p class="text-3xl">허원경</p>
+					<p>클래식기타</p>
+					<br>
+					<p># 학력</p>
+					<p>서울대학교 음악대학 졸업, 스페인 마드리드 왕립음악원 졸업</p>
+					<p># 출강이력</p>
+					<p>서울대학교, 가천대학교, 평택대학교, 목원대학교, 예원예술대학교, 관동대학교 대학원, 연세대학교, 총신콘서바토리, 경기예고, 안양예고 출강역임</p>
+					<p># 현재</p>
+					<p>한국기타협회 부회장, 수원대학교 학부 및 대학원 겸임교수, 서울예원·예고, 선화예고, 계원예고 출강</p>
+
+				</div>
+			</div>
+
+			<div>sns icons(todo)</div>
+			<div>youtube links(todo)</div>
+
+		</div>
+
+
+
+
+
+	</section>
+
+	<!-- 푸터 -->
+	<th:block th:replace="~{@{fragments/footer}}"></th:block>
+	<!-- 푸터 -->
+</body>
+</html>
+

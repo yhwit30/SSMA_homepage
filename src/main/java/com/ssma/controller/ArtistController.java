@@ -7,22 +7,28 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class ArtistController {
 
+	@RequestMapping("/artist/허원경")
+	public String showArtist1() {
 
-
-	@RequestMapping("/artist/detail")
-	public String getArtist(Model model) { 
-
-		
-		return "content/artist/detail";
+		return "content/artist허원경";
 	}
 
+	@RequestMapping("/artist/허대욱")
+	public String showArtist2() {
 
-	@RequestMapping("/artist/list")
-	public String showList() {
-
-		return "content/artist";
+		return "content/artist허대욱";
 	}
 
+	@RequestMapping("/artist/임재민")
+	public String showArtist3() {
 
+		return "content/artist임재민";
+	}
+
+	@RequestMapping("/artist/허병훈")
+	public String showArtist4() {
+
+		return "content/artist허병훈";
+	}
 
 }

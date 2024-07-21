@@ -1,0 +1,91 @@
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+<title>SSMA(Seoul Superior Music Academy) 커리큘럼</title>
+
+<!-- 헤더 -->
+<th:block th:replace="~{@{fragments/header}}"></th:block>
+<!-- 헤더 -->
+
+</head>
+
+<style>
+#minusZ {
+	z-index: -1;
+}
+</style>
+
+<body>
+
+	<!-- 내용 -->
+	<section class="content">
+
+		<!-- 페이지 이름 박스 -->
+		<div class="flex flex-col items-center justify-center px-40 py-40">
+			<p class="text-5xl pb-20">SS Music Academy 커리큘럼</p>
+			<p class="text-2xl ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dignissimos eaque
+				error dolores tempore facere reiciendis veritatis commodi fugit qui atque cupiditate accusamus ut incidunt minus
+				laborum quod consequuntur dolor?</p>
+		</div>
+
+		<!-- 커리큘럼 표 박스 -->
+		<div class="px-40 pb-40">
+			<table class="table table-zebra w-full ">
+				<!-- head -->
+				<thead>
+					<tr>
+						<th></th>
+						<th>제목</th>
+						<th>내용</th>
+						<th>악기</th>
+					</tr>
+				</thead>
+				<tbody>
+					<!-- row 1 -->
+					<tr>
+						<th>1</th>
+						<td>초급</td>
+						<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia vero omnis maiores quisquam
+							exercitationem aspernatur porro maxime alias explicabo quasi facilis voluptates dolorum unde nostrum expedita.
+							Maiores quia ullam impedit.</td>
+						<td>클래식기타</td>
+					</tr>
+					<!-- row 2 -->
+					<tr>
+						<th>2</th>
+						<td>중급</td>
+						<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi quaerat nostrum possimus fuga similique
+							eligendi dicta et laborum saepe nam soluta neque odio officiis esse quo ratione atque reiciendis molestiae.</td>
+						<td>클래식기타</td>
+					</tr>
+					<!-- row 3 -->
+					<tr>
+						<th>3</th>
+						<td>입시</td>
+						<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem odit omnis ab corrupti iure optio
+							laudantium esse quis pariatur quo repudiandae nam excepturi modi nihil eum illum alias laboriosam quam.</td>
+						<td>재즈피아노</td>
+					</tr>
+					<!-- row 4 -->
+					<tr>
+						<th>4</th>
+						<td>초급</td>
+						<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem odit omnis ab corrupti iure optio
+							laudantium esse quis pariatur quo repudiandae nam excepturi modi nihil eum illum alias laboriosam quam.</td>
+						<td>음악이론</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+
+
+
+	</section>
+
+	<!-- 푸터 -->
+	<th:block th:replace="~{@{fragments/footer}}"></th:block>
+	<!-- 푸터 -->
+</body>
+</html>
+
