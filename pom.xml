@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.KoreaIT.yhw.demo</groupId>
-	<artifactId>SSMA_noDB</artifactId>
+	<artifactId>SSMA_homepage</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>SSMA_noDB</name>
+	<name>SSMA_homepage</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>

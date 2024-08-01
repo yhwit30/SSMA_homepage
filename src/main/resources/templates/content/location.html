@@ -19,7 +19,7 @@
 
 		<!-- 페이지 이름 박스 -->
 		<div class="flex flex-col items-center justify-center gap-y-20 px-40 py-40">
-			<p class="text-5xl">SS Music Academy 오시는 길(지도마커에 이름넣기 todo)</p>
+			<p class="text-5xl">SS Music Academy 오시는 길</p>
 
 			<div class="flex justify-center gap-x-20 w-full">
 
@@ -30,8 +30,8 @@
 					<br>
 					<p class="font-bold">지하철</p>
 					<p>양재역 3번출구 (500m)</p>
-					<p>오는 길 자세히 보기(js todo)</p>
-					<p>양재역 3번출구에서 나와서 직진후 벤츠 Mercedes-Benz 건물 보이는 골목으로 들어와서 정면 유리 건물 4층입니다. (도보 7분)</p>
+<!-- 					<p>오는 길 자세히 보기(js todo)</p> -->
+					<p class="text-base">양재역 3번출구에서 나와서 직진후 벤츠 Mercedes-Benz 건물 보이는 골목으로 들어와서 정면 유리 건물 4층입니다. (도보 7분)</p>
 					<br>
 					<p class="font-bold">주차장</p>
 					<p>서한민영 주차장 (1시간 5천원 / 130m)
@@ -52,7 +52,7 @@
 					<p>냉난방 완비</p>
 				</div>
 				<!-- 지도 태그 -->
-				<div class="h-auto w-[500px]" id="map"></div>
+				<div class="h-auto w-[700px]" id="map"></div>
 
 			</div>
 
@@ -104,6 +104,20 @@
 			map : map
 		// 마커가 지도 위에 표시되도록 설정합니다
 		});
+		
+		// 인포윈도우에 표시될 내용입니다
+	
+	var iwContent = '<div style="padding:5px; text-align:center;">SSMA 음악학원<br><div style="display: flex; justify-content: center; align-items: center;"><a href="https://map.kakao.com/link/to/SSMA 음악학원,37.488902233685,127.03329726345" style="color:blue;" target="_blank">길찾기</a></div></div>';
+
+		// 인포윈도우를 생성합니다
+		var infowindow = new kakao.maps.InfoWindow({
+			content : iwContent, // 인포윈도우에 표시할 내용
+			position : markerPosition
+		// 인포윈도우를 표시할 위치
+		});
+
+		// 마커 위에 인포윈도우를 표시합니다
+		infowindow.open(map, marker);
 	}
 
 	// 페이지 로드 시 initMap 함수를 호출하여 지도를 초기화합니다
