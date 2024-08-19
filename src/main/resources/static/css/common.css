@@ -38,32 +38,13 @@ html, body {
 	font-style: normal;
 }
 
-/* 헤더, 푸터 고정을 위한 설정 -> */
 body {
 	display: flex;
 	flex-direction: column;
-	min-height: 100vh;
-}
-
-.header {
-	background-color: #004aae;
-	height: 60px;
-	width: 100%;
-	position: fixed;
-	top: 0;
-	z-index: 99;
+	min-height: 100vh; /* 헤더, 푸터 고정을 위한 설정 -> */
 }
 
 .content {
-	margin-top: 60px;
+	margin-top: 80px;
 	margin-bottom: auto;
 }
-
-/*  tailwind UI 때문에 class 이름 footer에서 foot으로 수정 */
-.foot {
-	background-color: #004aae;
-	height: 150px;
-	width: 100%;
-	z-index: 99;
-}
-/* <- 헤더, 푸터 고정을 위한 설정 */
