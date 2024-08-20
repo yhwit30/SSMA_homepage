@@ -42,6 +42,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh; /* 헤더, 푸터 고정을 위한 설정 -> */
+	overflow-x: hidden;
 }
 
 .content {
