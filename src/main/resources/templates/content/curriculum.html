@@ -10,10 +10,38 @@
 </head>
 
 <style>
-#minusZ {
-	z-index: -1;
+.Ctable {
+	border-collapse: collapse; /* Ensures that borders don't double up */
+	width: 100%;
+}
+
+.Ctable th, .Ctable td {
+	border: 1px solid #cccccc; /* Adds a 1px solid border to each cell */
+	padding: 8px; /* Adds padding to make the content more readable */
+}
+
+.Ctable thead th {
+	background-color: #004aae;
+	/* Use the theme color for header background */
+	color: #ffffff; /* White text for contrast */
+	font-weight: bold;
+	text-align: center;
+	padding: 10px 0;
+}
+
+.Ctable tr:hover {
+	background-color: #e6f0ff;
+	/* A lighter shade of blue for row hover effect */
+}
+
+.Ctable tbody th {
+	vertical-align: middle;
+	text-align: center;
+	white-space: nowrap;
+	background-color: #f0f7ff; /* Very light blue for the first column */
 }
 </style>
+
 
 <body>
 
@@ -21,52 +49,228 @@
 	<section class="content">
 
 		<!-- 페이지 이름 박스 -->
-		<div class="flex flex-col items-center justify-center px-20 lg:px-40 py-40">
-			<p class="text-5xl pb-20">SS뮤직아카데미 커리큘럼</p>
-			<p class="text-lg">SS뮤직아카데미를 선택해야 하는 이유! 커리큘럼!</p>
+		<div class="flex flex-col items-center justify-center px-20 py-40 gap-y-6 lg:px-40 xl:px-40">
+			<p class="text-5xl">SS뮤직아카데미 커리큘럼</p>
+			<p class="text-xl lg:text-base xl:text-base font-bold pt-20">수업방향, 모토</p>
+			<p class="text-xl lg:text-base xl:text-base">
+			SS뮤직아카데미(Seoul Superior Music Academy)는 학생들의 음악적 꿈과 목표를 실현할 수 있도록 최상의 교육 환경을 제공하는 학원입니다.
+			<br>
+			<br>
+			전문성과 열정을 겸비한 서울대 출신, 현 음악대학 대학 출강, 국제적인 활동(국내 및 유럽, d’Antony(프랑스) 국제 기타 콩쿨수상, 프랑스 재즈 레이블 Cristal 레코드에서 음반 발매, Sony뮤직
+			코리아 음반 발매 등 국제 투어)등으로 입증된 교수진들이 학생들의 수준과 지향점에 발맞추어 교육을 하고 있습니다.
+			<br>
+			<br>
+			또한, 1:1 개인 레슨을 통해 개개인의 수준과 목표에 맞춘 맞춤형 교육을 제공합니다.
+			</p>
 		</div>
 
 		<!-- 커리큘럼 표 박스 -->
-		<div class="px-10 lg:px-40 pt-20 pb-40 bg-[#FFECB3]">
-			<table class="table table-zebra w-full pt-20 text-xl lg:text-base">
+		<div class="overflow-x-auto px-10 lg:px-20 xl:px-20 pb-40">
+			<table class="Ctable text-xl lg:text-base xl:text-base">
 				<!-- head -->
 				<thead>
 					<tr>
-						<th></th>
-						<th>제목</th>
-						<th>내용</th>
-						<th>악기</th>
+						<th colspan="3">클래식기타</th>
 					</tr>
 				</thead>
 				<tbody>
 					<!-- row 1 -->
 					<tr>
-						<th>1</th>
-						<td>초급</td>
-						<td>클래식기타 초급 커리큘럼 내용</td>
-						<td>클래식기타</td>
+						<th>초,중급</th>
+						<td>
+							- 삼호뮤직출판사의 “즐거운 클래식기타 1~3 초급과 4~6권(저자 허 병훈)으로 수업합니다.
+							<br>
+							<br>
+							- 기타를 처음 배우는 학생들이 전공과 비전공의 차이 없이 체계적인 수업으로 이루어집니다. 시작은 취미로 하지만 전공으로 방향을 잡았을 때 배움에 차이가 있거나 어려움이 없도록 하는 교육이 SSMA의
+							교육관입니다.
+							<br>
+							<br>
+							- 아마추어들은 고급과정으로 갔을 때 여러 어려움에 봉착하게 됩니다. 이는 기본적인 초, 중급 과정을 체계적으로 학습하지 않은 결과라고 볼 수 있습니다. SSMA는 무리한 난이도 도약에 따르는 허점들 을
+							놓치지 않고 채우는 학습을 합니다.
+						</td>
 					</tr>
 					<!-- row 2 -->
 					<tr>
-						<th>2</th>
-						<td>중급</td>
-						<td>클래식기타 중급 커리큘럼 내용</td>
-						<td>클래식기타</td>
+						<th>고급A,B</th>
+						<td>
+							- 고급A과정은 높은 수준의 아마추어 학습자를 위한 과정입니다. 이미 수준 높은 독주곡을 연습하고 있으며 전공생 수준의 연주 실 력을 갖추고자 하는 학생들을 위한 심화 과정입니다.
+							<br>
+							<br>
+							- 고급B과정은 전공생 또는 입시생을 위한 심화 과정입니다.
+						</td>
 					</tr>
 					<!-- row 3 -->
 					<tr>
-						<th>3</th>
-						<td>입시</td>
-						<td>재즈피아노 입시 커리큘럼 내용</td>
-						<td>재즈피아노</td>
+						<th>테크닉 트레이닝</th>
+						<td>아마추어와 전공생 모두를 위한 과정입니다. 곡을 연주하는데 있어 필요한 기술적인 와성을 돕는 과정입니다. 바른 자세의 완성, 크고 명료하게 소리내기, 양손의 타이밍 맞추기, 속도 올리기
+							등을 공부 합니다</td>
 					</tr>
 					<!-- row 4 -->
 					<tr>
-						<th>4</th>
-						<td>초급</td>
-						<td>음악이론 초급 커리큘럼 내용</td>
-						<td>음악이론</td>
+						<th>테크닉 트레이닝 A,B</th>
+						<td>
+							- 테크닉 트레이닝A는 아마추어의 기술적 완성을 돕는 수업입니다. 전공생에 준하는 학습 방법으로 학습하는 곡의 수준은 높지만 완성 도가 떨어질 때 그 문제를 진단하고 부족한 부분을 강화하여 노련 한
+							연주를 이끌어내도록 돕는 과정입니다.
+							<br>
+							<br>
+							- 테크닉 트레이닝B는 전공생을 위한 기술적 완성을 높이는 과정입 니다. 곡만 공부해서는 절대 완성할 수 없는 기능에 대한 공부로 학습을 한 학생과 하지 않은 학생의 차이가 극명해집니다.
+						</td>
 					</tr>
+					<!-- row 5 -->
+					<tr>
+						<th>그룹레슨</th>
+						<td>클래식기타 그룹레슨은 혼자 배우기에는 부담스럽거나 기타를 가볍게 알아가고 싶은 분들을 위한 수업입니다. 강의 형식의 수업이며 5명이 정원입니다. 그룹 수업이지만 개인별 체크와 코멘트로
+							진행됩니다</td>
+					</tr>
+				</tbody>
+				<thead>
+					<tr>
+						<th colspan="3">통기타</th>
+					</tr>
+				</thead>
+				<tbody>
+					<!-- row 1 -->
+					<tr>
+						<th>초급</th>
+						<td>
+							클래식기타와 달리 독주를 위한 연주가 아니라 노래의 반주를 코드 진행을 위한 오른손의 스트로크 및 아르페지오를 학습하는 과정입 SS Music Academy 커리큘럼니다.
+							<br>
+							(기타를 처음 접하는 경우 화음을 누르는 것이 쉽지 않아 기본적인 클래식기타 과정에서부터 출발하는 것이 더 빠른 학습 방법일 수 있습니다.)
+						</td>
+					</tr>
+					<!-- row 2 -->
+					<tr>
+						<th>중급</th>
+						<td>중급은 핑거스타일의 독주 연주를 배우는 과정입니다.</td>
+					</tr>
+					<!-- row 3 -->
+					<tr>
+						<th>
+							ABRSM
+							<br>
+							(The Associated Board of
+							<br>
+							the Royal Schools of Music)
+						</th>
+						<td>
+							- 1889년 설립된 ABRSM(The Associated Board of the Royal Schools of Music)은 영국 왕립음악대학교인 Royal Academy of Music, Royal
+							College of Music, Royal Northern College of Music, Royal Conservatoire of Scotland와 연계된 기관입 니다.
+							<br>
+							<br>
+							- ABRSM의 모든 수험자는 시험관으로부터 객관적이고 공정한 디지털 평가서를 받게 되며, 시험 합격자들은 국제적으로 공인된 합격증서(Certificate)를 취득하게 됩니다. 유학을 준비중인 학생
+							들에게 필요한 포트폴리오를 만드는데 필요하며, SSMA는 그에 따른 연주 프로필을 완성하는데 다양한 프로그램을 갖추고 있습니다.
+							<br>
+							<br>
+							- ABRSM 기타는 G1~8 과정으로 이루어져 있으며 G6 레벨 시험 전에 이론 레벨5까지를 통과해야 합니다.
+							<br>
+							<br>
+							- 실기 등급은 연주 녹화 업로드로 평가받으며 상위 디플로마 시험은 오직 대면평가로만 이루어집니다.
+							<br>
+							<br>
+							- 원격 연주녹화 레벨 테스트는 연주 필수곡 3곡과 자유곡 1곡으로 이루어집니다.
+							<br>
+							<br>
+							- SS뮤직 아카데미는 각각의 그레이드별 실력 향상과 레벨 테스 트를 통과 할 수 있도록 체계적인 커리큘럼이 확보 되어 있습니다.
+						</td>
+					</tr>
+				</tbody>
+				<thead>
+					<tr>
+						<th colspan="3">재즈피아노</th>
+					</tr>
+				</thead>
+				<tbody>
+					<!-- row 1 -->
+					<tr>
+						<th>전문가 과정</th>
+						<td>
+							- 즉흥연주를 위한 연습법-soloing
+							<br>
+							Scale과 triad, chord tone (프로뮤지션이 되기 위해서는 Scale과 triad, chord tone을 완전 히 새로운 방식으로 트레이닝을 해야 합니다) 사용가능한 모든 컴비네이션을
+							연습하고 그 후에 가이드톤과 어프 로치노트들을 연습합니다. 그 후에 모든 조의 다이아토닉을 학습합니다. 다양한 mode를 연습하고 실제 곡에 적용합니다.
+							<br>
+							<br>
+							- 보이싱 연습법
+							<br>
+							기본화음을 어떻게 재구성될 수 있는지 그 방식을 살펴보고 여러기 법들을 통해서 다양한 polychord의 가능성을 학습합니다. 화성의 수직적 확장뿐 아니라 전.후 관계와 mode에 따른 화성을
+							학습합니다.
+							<br>
+							독주(왼손의 다양한 패턴 연습, 오스티나토와 soloing)
+
+						</td>
+					</tr>
+					<!-- row 2 -->
+					<tr>
+						<th>입시반</th>
+						<td>
+							실용음악과에 진학하고자 하는 모든 전공자를 위한 과정으로 서울예대 재학중이며 2023년 서울예대 입시지도를 하여 합격시킨 선생님이 직접지도를 합니다.
+							<br>
+							<br>
+							현재 입시에 최전방에 있으면 입시에 관한 모든 흐름과 방식을 가 장 잘 이해하고 있는 선생님의 레슨을 통해 지원학교의 스타일에 맞게 준비합니다.
+						</td>
+					</tr>
+				</tbody>
+				<thead>
+					<tr>
+						<th colspan="3">클래식, 실용음악 작곡, 음악이론</th>
+					</tr>
+				</thead>
+				<tbody>
+					<!-- row 1 -->
+					<tr>
+						<th>공통과정</th>
+						<td>
+							1.음정
+							<br>
+							2.음계
+							<br>
+							3.주요 3화음
+							<br>
+							4.주요 3화음의 전위
+							<br>
+							5.3화음 다이아토닉
+							<br>
+							6.7화음
+							<br>
+							7.7화음의 전위
+							<br>
+							8.7화음 다이아토닉
+							<br>
+							9.종지(케이던스)
+							<br>
+							10.비화성음
+							<br>
+							11.전조ㅡ온음계적 전조ㅡ 반음계적 전조
+							<br>
+							12.세컨더리 도미넌트, 세컨더리 디미니쉬
+							<br>
+							13.차용화음
+							<br>
+							14.네아폴리탄과 증6화음들
+							<br>
+							15.고급전조
+							<br>
+							<br>
+							“모든 챕터 전 과정 피아노로 직접 연주하고 화성을 만들면서 수업 진행” 음악이론과 화성학 문제 풀이에 그치지 않고 모든 내용들이 어떻게 음악에 적용되는지 전 과정을 피아노로 직접 화성을 만들고 더 나
+							아가 즉흥적으로 작곡을 할 수 있는 고급과정까지 수업이 진행됩니다.
+						</td>
+				</tbody>
+				<thead>
+					<tr>
+						<th colspan="3">재즈피아노(취미반, CCM 반주반)</th>
+					</tr>
+				</thead>
+				<tbody>
+					<!-- row 1 -->
+					<tr>
+						<th>취미반</th>
+						<td>탄탄한 음악이론을 바탕으로 학생의 목표와 니즈에 따른 체계적인 개인 맞춤형 레슨을 진행합니다. 재즈, 대중음악, 영화음악, 뉴에이지, 클래식, 코드 반주 등의 다양한 스타일로 피아노 연주
+							실력 향상을 위해 세심하게 지도합니다. 스윙, 보사노바, 블루스, 펑크, 왈츠 등 리듬패턴을 사용하여 곡을 다양한 스타일로 연주해 볼 수 있도록 레슨이 진행됩니다.</td>
+						<!-- row 2 -->
+					<tr>
+						<th>CCM 반주반</th>
+						<td>전문 반주자 선생님의 노하우를 통해 교회 반주자로서의 역량을 트 레이닝합니다. 기본적인 코드 반주에 머무르지 않고 코드를 더욱 다채롭게 연주할 수 있도록 리하모니제이션 기법의 심화
+							테크닉들을 지도합니다. CCM의 여러 장르에 대응할 수 있도록 각 곡에 따른 리듬패턴과 양손의 반주형태 화성변화들의 학습을 통해 전문적인 CCM 연주를 할 수 있도록 레슨이 진행됩니다.</td>
 				</tbody>
 			</table>
 		</div>
